@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>6 Reasons Insurance Claims Get Denied (and How to Prevent Each One) | Bill The Max</title>
+  <meta name="description" content="Claim denials drain revenue and slow down your practice. Here are the 6 most common reasons claims get denied — incorrect patient info, eligibility, coding errors, prior auth, timely filing, and medical necessity — plus how to prevent each one.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Page-local fallback styles: ensure the page renders coherently even before the shared styles.css lands.
+       These mirror conventional brand tokens; the shared stylesheet (loaded above) takes precedence. -->
+  <style>
+    :root{
+      --btm-navy:#0b2545;--btm-navy-2:#13315c;--btm-teal:#1d9e8f;--btm-teal-2:#16877a;
+      --btm-ink:#1a2433;--btm-slate:#52617a;--btm-line:#e4e9f0;--btm-bg:#ffffff;
+      --btm-mist:#f4f7fb;--btm-gold:#e0b84b;--btm-radius:16px;--btm-maxw:1140px;
+      --btm-shadow:0 18px 40px -22px rgba(11,37,69,.35);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:"Manrope","Plus Jakarta Sans",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--btm-ink);background:var(--btm-bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+    a{color:var(--btm-teal-2);text-decoration:none}
+    a:hover{text-decoration:underline}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--btm-maxw);margin:0 auto;padding:0 24px}
+    h1,h2,h3{font-family:"Plus Jakarta Sans","Manrope",sans-serif;color:var(--btm-navy);line-height:1.2;letter-spacing:-.01em}
+    /* Header */
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--btm-line)}
+    .nav{display:flex;align-items:center;gap:28px;height:74px}
+    .brand{display:flex;align-items:center;gap:10px;font-family:"Plus Jakarta Sans",sans-serif;font-weight:800;font-size:1.18rem;color:var(--btm-navy);letter-spacing:-.02em}
+    .brand .brand-mark{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--btm-navy),var(--btm-teal));color:#fff;font-weight:800;font-size:.95rem}
+    .brand:hover{text-decoration:none}
+    .nav-links{display:flex;align-items:center;gap:22px;margin-left:auto;list-style:none;padding:0;margin-top:0;margin-bottom:0}
+    .nav-links a{color:var(--btm-slate);font-weight:600;font-size:.95rem;padding:6px 2px}
+    .nav-links a:hover{color:var(--btm-navy);text-decoration:none}
+    .nav-links a.active{color:var(--btm-navy)}
+    .nav-links a.active::after{content:"";display:block;height:2px;border-radius:2px;background:var(--btm-teal);margin-top:4px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;font-size:.95rem;padding:12px 22px;border-radius:999px;border:1px solid transparent;cursor:pointer;transition:transform .12s ease,box-shadow .2s ease,background .2s ease}
+    .btn:hover{text-decoration:none;transform:translateY(-1px)}
+    .btn-primary{background:linear-gradient(135deg,var(--btm-teal),var(--btm-teal-2));color:#fff;box-shadow:0 12px 24px -12px rgba(29,158,143,.7)}
+    .btn-ghost{background:#fff;color:var(--btm-navy);border-color:var(--btm-line)}
+    .btn-light{background:#fff;color:var(--btm-navy)}
+    .btn-lg{padding:15px 30px;font-size:1.02rem}
+    .nav .btn{margin-left:4px}
+    /* Article */
+    .article-wrap{max-width:820px;margin:0 auto;padding:0 24px}
+    .breadcrumbs{font-size:.9rem;color:var(--btm-slate);padding-top:26px}
+    .breadcrumbs a{color:var(--btm-slate);font-weight:600}
+    .post-eyebrow{display:inline-block;margin-top:26px;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--btm-teal-2);background:rgba(29,158,143,.1);padding:6px 12px;border-radius:999px}
+    .post-title{font-size:clamp(2rem,4.6vw,3rem);margin:18px 0 14px;font-weight:800}
+    .post-meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;color:var(--btm-slate);font-size:.92rem;font-weight:500;margin-bottom:8px}
+    .post-meta .dot{width:4px;height:4px;border-radius:50%;background:#c2ccdb}
+    .post-meta .meta-cat{color:var(--btm-teal-2);font-weight:700}
+    .post-hero{margin:26px auto 0;border-radius:var(--btm-radius);overflow:hidden;box-shadow:var(--btm-shadow)}
+    .post-hero img{width:100%;height:clamp(260px,42vw,460px);object-fit:cover}
+    .post-body{font-size:1.075rem;color:#2b3647;padding:34px 0 8px}
+    .post-body p{margin:0 0 20px}
+    .post-body .lead{font-size:1.2rem;color:var(--btm-slate);line-height:1.6}
+    .post-body h2{font-size:clamp(1.4rem,2.6vw,1.75rem);margin:38px 0 12px}
+    .post-body h2 .num{color:var(--btm-teal);font-weight:800}
+    .post-body h3{font-size:1.12rem;margin:24px 0 8px;color:var(--btm-navy-2)}
+    .post-body ul,.post-body ol{margin:0 0 22px;padding-left:1.2rem}
+    .post-body li{margin:0 0 10px}
+    .post-body strong{color:var(--btm-navy)}
+    .tip{background:var(--btm-mist);border:1px solid var(--btm-line);border-left:4px solid var(--btm-teal);border-radius:12px;padding:16px 20px;margin:0 0 22px}
+    .tip .tip-label{display:block;font-weight:800;color:var(--btm-navy);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+    .tip p{margin:0;color:#33414f}
+    /* Help + takeaways cards */
+    .help-card{background:linear-gradient(135deg,var(--btm-navy),var(--btm-navy-2));color:#eaf1fb;border-radius:var(--btm-radius);padding:30px 32px;margin:34px 0}
+    .help-card h2{color:#fff;margin:0 0 10px}
+    .help-card p{margin:0;color:#cdd9ec}
+    .takeaways{background:#fff;border:1px solid var(--btm-line);border-radius:var(--btm-radius);padding:28px 30px;margin:30px 0;box-shadow:var(--btm-shadow)}
+    .takeaways h2{margin:0 0 14px;font-size:1.35rem}
+    .takeaways ul{list-style:none;margin:0;padding:0}
+    .takeaways li{position:relative;padding-left:30px;margin:0 0 12px;color:#2b3647}
+    .takeaways li::before{content:"✓";position:absolute;left:0;top:0;color:var(--btm-teal-2);font-weight:800}
+    /* CTA band */
+    .cta-band{background:radial-gradient(120% 140% at 0% 0%,var(--btm-teal-2) 0%,var(--btm-navy) 60%);color:#fff;margin-top:54px}
+    .cta-band .inner{max-width:var(--btm-maxw);margin:0 auto;padding:58px 24px;text-align:center}
+    .cta-band h2{color:#fff;font-size:clamp(1.6rem,3.4vw,2.3rem);margin:0 0 12px}
+    .cta-band p{color:#dbe6f5;max-width:620px;margin:0 auto 26px;font-size:1.08rem}
+    .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    .back-link{display:inline-flex;align-items:center;gap:8px;margin:36px 0 4px;font-weight:700;color:var(--btm-teal-2)}
+    /* Footer */
+    .site-footer{background:#081a31;color:#aebfd6;padding:56px 0 26px;margin-top:0}
+    .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:36px}
+    .site-footer .brand{color:#fff}
+    .site-footer h4{color:#fff;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;margin:0 0 14px}
+    .footer-about{margin:14px 0 0;color:#9fb2cc;font-size:.95rem;max-width:300px}
+    .footer-list{list-style:none;margin:0;padding:0}
+    .footer-list li{margin:0 0 10px}
+    .footer-list a{color:#aebfd6;font-weight:500}
+    .footer-list a:hover{color:#fff;text-decoration:none}
+    .footer-contact{font-style:normal;color:#aebfd6;font-size:.95rem;line-height:1.8}
+    .footer-contact a{color:#aebfd6}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.85rem;color:#7e93b3}
+    :focus-visible{outline:3px solid var(--btm-teal);outline-offset:2px;border-radius:6px}
+    @media (max-width:860px){
+      .footer-grid{grid-template-columns:1fr 1fr}
+      .nav-links{display:none}
+    }
+    @media (max-width:560px){
+      .footer-grid{grid-template-columns:1fr}
+    }
+  </style>
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+  <!-- ============ CANONICAL HEADER ============ -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Bill The Max home">
+        <span class="brand-mark" aria-hidden="true"><span>B</span></span>
+        <span>Bill The Max</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="specialties.html">Specialties</a></li>
+        <li><a href="blog.html" class="active" aria-current="page">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a class="btn btn-primary btn-sm" href="contact.html">Free Audit</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-controls="nav-links" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ ARTICLE ============ -->
+    <article class="article-wrap">
+
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a> &rsaquo; <a href="blog.html">Blog</a> &rsaquo; <span>Claim Denials</span>
+      </nav>
+
+      <span class="post-eyebrow">Denials</span>
+      <h1 class="post-title">6 Reasons Insurance Claims Get Denied (and How to Prevent Each One)</h1>
+
+      <div class="post-meta">
+        <span>By <strong>Bill The Max Team</strong></span>
+        <span class="dot" aria-hidden="true"></span>
+        <time datetime="2026-06-25">June 25, 2026</time>
+        <span class="dot" aria-hidden="true"></span>
+        <span>6 min read</span>
+        <span class="dot" aria-hidden="true"></span>
+        <span class="meta-cat">Denials</span>
+      </div>
+
+      <figure class="post-hero">
+        <img
+          src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1400&q=80"
+          alt="A medical billing specialist reviewing stacks of insurance paperwork and denial notices on a desk"
+          loading="eager" width="1400" height="460">
+      </figure>
+
+      <div class="post-body">
+
+        <p class="lead">A denied claim is rarely a dead end — but it is always expensive. Every rejection means reworked paperwork, delayed cash flow, and staff hours spent chasing money your practice already earned. The good news: the overwhelming majority of denials trace back to a short list of preventable errors. Fix the upstream causes and you collect more, faster, with far less friction.</p>
+
+        <p>Below are the six reasons claims get denied most often in medical and dental practices, and the specific, practical steps that keep each one from happening in the first place. None of this requires a bigger team — it requires tighter habits at the front desk, in the chart, and in the billing workflow.</p>
+
+        <h2><span class="num">1.</span> Missing or Incorrect Patient Information</h2>
+        <p>It sounds almost too simple, but a transposed digit in a member ID, a misspelled last name, or a date of birth that doesn't match the payer's records is one of the most common reasons claims bounce back. Insurers match every claim against their enrollment data, and even a tiny mismatch triggers an automatic rejection before a single line of the claim is ever reviewed.</p>
+        <div class="tip">
+          <span class="tip-label">How to prevent it</span>
+          <p>Capture and confirm demographics at every visit, not just the first one. Scan the insurance card front and back, verify spelling against a photo ID, and re-confirm the member ID and group number on file. Build a short check into your intake workflow so the same fields are validated the same way every time.</p>
+        </div>
+
+        <h2><span class="num">2.</span> Eligibility Was Never Verified</h2>
+        <p>Coverage changes constantly — plans lapse, employers switch carriers, deductibles reset, and patients forget to mention any of it. When a service is billed to a policy that wasn't active on the date of service, the claim is denied outright, and you're left collecting from a patient who assumed they were covered.</p>
+        <div class="tip">
+          <span class="tip-label">How to prevent it</span>
+          <p>Run a real-time eligibility check before every appointment, ideally 24 to 48 hours ahead. Confirm active coverage, the patient's responsibility, and whether the service is in-network. Flagging a coverage gap before the visit lets you correct it or collect up front instead of fighting a denial weeks later.</p>
+        </div>
+
+        <h2><span class="num">3.</span> Coding Errors, Upcoding, and Downcoding</h2>
+        <p>The codes on a claim tell the payer exactly what happened and why it was necessary. A mismatched diagnosis and procedure pairing, an outdated CPT or ICD-10 code, or a missing modifier can all get a claim kicked back. Just as damaging are <strong>upcoding</strong> (billing for a higher level of service than was provided) and <strong>downcoding</strong> (under-coding out of caution), which cost you revenue and invite scrutiny.</p>
+        <div class="tip">
+          <span class="tip-label">How to prevent it</span>
+          <p>Keep code sets current, use payer-specific coding rules, and make sure documentation supports the exact level of service billed — no more, no less. A second set of trained eyes on high-dollar or complex claims catches the errors that automated edits miss.</p>
+        </div>
+
+        <h2><span class="num">4.</span> Missing Prior Authorization</h2>
+        <p>Many procedures, imaging studies, and specialty services require the payer to approve them <em>before</em> they're performed. If that authorization isn't obtained — or the auth number isn't attached to the claim — the denial is almost guaranteed, and most payers will not grant retroactive approval no matter how medically appropriate the care was.</p>
+        <div class="tip">
+          <span class="tip-label">How to prevent it</span>
+          <p>Maintain a current list of services that require prior authorization for each major payer, and check it during scheduling. Start the auth process early, document the approval number, and confirm it's carried through to the claim. When a payer is slow to respond, follow up in writing so you have a paper trail.</p>
+        </div>
+
+        <h2><span class="num">5.</span> Timely-Filing Limits Were Missed</h2>
+        <p>Every payer sets a deadline for submitting claims — sometimes as short as 90 days from the date of service. Miss it, and the claim is denied permanently, with virtually no appeal. These denials sting the most because the work was done, the claim was clean, and the money was simply left on the table.</p>
+        <div class="tip">
+          <span class="tip-label">How to prevent it</span>
+          <p>Submit claims daily rather than in batches, and track timely-filing windows by payer in your practice management system. Build an aging report that surfaces unsubmitted or stuck claims well before any deadline, so nothing slips past the cutoff while it waits on missing information.</p>
+        </div>
+
+        <h2><span class="num">6.</span> Lack of Medical Necessity or Documentation</h2>
+        <p>Even a perfectly coded, perfectly timed claim will be denied if the payer doesn't see proof that the service was medically necessary. Thin chart notes, missing test results, or documentation that doesn't connect the diagnosis to the treatment all give the payer a reason to say no — and a reason to deny the appeal, too.</p>
+        <div class="tip">
+          <span class="tip-label">How to prevent it</span>
+          <p>Document while the visit is fresh, and make the clinical story explicit: the symptom, the finding, the decision, and why the chosen treatment was warranted. Know each payer's medical-necessity policies for common services, and attach supporting records to claims that tend to draw extra review.</p>
+        </div>
+
+        <!-- How Bill The Max helps -->
+        <div class="help-card">
+          <h2>How Bill The Max helps</h2>
+          <p>Our team builds these safeguards directly into your revenue cycle so denials are prevented, not just appealed. We verify eligibility before the visit, scrub every claim against payer rules, manage prior authorizations and timely-filing windows, and work denials to resolution with full transparency. You see the numbers in plain language, and you keep more of what you earn — maximum reimbursement, minimum hassle.</p>
+        </div>
+
+        <!-- Key takeaways -->
+        <section class="takeaways" aria-labelledby="takeaways-title">
+          <h2 id="takeaways-title">Key takeaways</h2>
+          <ul>
+            <li>Most denials are preventable and trace back to a handful of front-end and documentation errors.</li>
+            <li>Confirm patient demographics and verify eligibility <strong>before</strong> every visit, not after the denial.</li>
+            <li>Keep coding current and accurate — avoid both upcoding and downcoding, and back every code with documentation.</li>
+            <li>Track prior authorizations and timely-filing deadlines by payer so nothing expires.</li>
+            <li>Strong, specific clinical documentation is your best defense against medical-necessity denials and failed appeals.</li>
+            <li>A consistent, payer-aware workflow turns denial prevention into a routine — and protects your cash flow.</li>
+          </ul>
+        </section>
+
+        <a class="back-link" href="blog.html">&larr; Back to blog</a>
+
+      </div>
+    </article>
+
+    <!-- ============ CTA BAND ============ -->
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="inner">
+        <h2 id="cta-title">Tired of working denials instead of patients?</h2>
+        <p>Let Bill The Max audit your claims process for free. We'll show you exactly where revenue is leaking and how to seal it — faster payments, fewer denials, full transparency.</p>
+        <div class="cta-actions">
+          <a class="btn btn-light btn-lg" href="contact.html">Get a Free Practice Audit</a>
+          <a class="btn btn-ghost btn-lg" href="contact.html">Request a Free Consultation</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ CANONICAL FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Bill The Max home">
+            <span class="brand-mark" aria-hidden="true"><span>B</span></span>
+            <span>Bill The Max</span>
+          </a>
+          <p class="footer-about">Premium medical &amp; dental billing and revenue-cycle management for practices nationwide. Maximum reimbursement. Minimum hassle.</p>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="specialties.html">Specialties</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get Started</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Free Practice Audit</a></li>
+            <li><a href="contact.html">Request a Consultation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <address class="footer-contact">
+            183 Wilson Street, Suite 230<br>
+            Brooklyn, NY 11211<br>
+            <a href="mailto:info@billthemax.com">info@billthemax.com</a><br>
+            Fax: (732) 992-3363
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year">2026</span> Bill The Max. All rights reserved.</span>
+        <span>HIPAA-compliant medical &amp; dental billing &middot; Brooklyn, NY</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Billing Insights &amp; Resources | Bill The Max</title>
+  <meta name="description" content="Practical guidance from the Bill The Max team on medical and dental billing, claim denials, revenue-cycle management, and credentialing — written to help your practice get paid faster.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Page-local fallback styles: keep the page coherent even before the shared styles.css lands,
+       and add the blog-index-specific components (hero, post cards, signup band).
+       The shared stylesheet (loaded above) takes precedence wherever it defines the same rule. -->
+  <style>
+    :root{
+      --btm-navy:#0b2545;--btm-navy-2:#13315c;--btm-teal:#1d9e8f;--btm-teal-2:#16877a;
+      --btm-ink:#1a2433;--btm-slate:#52617a;--btm-line:#e4e9f0;--btm-bg:#ffffff;
+      --btm-mist:#f4f7fb;--btm-gold:#e0b84b;--btm-radius:16px;--btm-maxw:1140px;
+      --btm-shadow:0 18px 40px -22px rgba(11,37,69,.35);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:"Manrope","Plus Jakarta Sans",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--btm-ink);background:var(--btm-bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+    a{color:var(--btm-teal-2);text-decoration:none}
+    a:hover{text-decoration:underline}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--btm-maxw);margin:0 auto;padding:0 24px}
+    h1,h2,h3{font-family:"Plus Jakarta Sans","Manrope",sans-serif;color:var(--btm-navy);line-height:1.2;letter-spacing:-.01em}
+    /* Header */
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--btm-line)}
+    .nav{display:flex;align-items:center;gap:28px;height:74px}
+    .brand{display:flex;align-items:center;gap:10px;font-family:"Plus Jakarta Sans",sans-serif;font-weight:800;font-size:1.18rem;color:var(--btm-navy);letter-spacing:-.02em}
+    .brand .brand-mark{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--btm-navy),var(--btm-teal));color:#fff;font-weight:800;font-size:.95rem}
+    .brand:hover{text-decoration:none}
+    .nav-links{display:flex;align-items:center;gap:22px;margin-left:auto;list-style:none;padding:0;margin-top:0;margin-bottom:0}
+    .nav-links a{color:var(--btm-slate);font-weight:600;font-size:.95rem;padding:6px 2px}
+    .nav-links a:hover{color:var(--btm-navy);text-decoration:none}
+    .nav-links a.active{color:var(--btm-navy)}
+    .nav-links a.active::after{content:"";display:block;height:2px;border-radius:2px;background:var(--btm-teal);margin-top:4px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;font-size:.95rem;padding:12px 22px;border-radius:999px;border:1px solid transparent;cursor:pointer;transition:transform .12s ease,box-shadow .2s ease,background .2s ease}
+    .btn:hover{text-decoration:none;transform:translateY(-1px)}
+    .btn-primary{background:linear-gradient(135deg,var(--btm-teal),var(--btm-teal-2));color:#fff;box-shadow:0 12px 24px -12px rgba(29,158,143,.7)}
+    .btn-ghost{background:#fff;color:var(--btm-navy);border-color:var(--btm-line)}
+    .btn-light{background:#fff;color:var(--btm-navy)}
+    .btn-lg{padding:15px 30px;font-size:1.02rem}
+    .nav .btn{margin-left:4px}
+    /* Page hero */
+    .blog-hero{background:radial-gradient(120% 150% at 100% 0%,var(--btm-navy-2) 0%,var(--btm-navy) 55%);color:#eaf1fb}
+    .blog-hero .inner{max-width:var(--btm-maxw);margin:0 auto;padding:64px 24px 60px}
+    .blog-hero .eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--btm-teal);background:rgba(29,158,143,.14);padding:6px 13px;border-radius:999px}
+    .blog-hero h1{color:#fff;font-size:clamp(2.1rem,4.6vw,3.05rem);font-weight:800;margin:18px 0 14px;max-width:18ch}
+    .blog-hero p{color:#c7d4e8;font-size:1.16rem;max-width:60ch;margin:0}
+    /* Blog grid + cards */
+    .blog-section{padding:60px 0 8px}
+    .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+    .post-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--btm-line);border-radius:var(--btm-radius);overflow:hidden;box-shadow:0 1px 2px rgba(13,36,64,.06);transition:transform .18s ease,box-shadow .25s ease,border-color .2s ease}
+    .post-card:hover{transform:translateY(-5px);box-shadow:var(--btm-shadow);border-color:#d6deea}
+    .post-card .media{aspect-ratio:16/10;overflow:hidden;background:var(--btm-mist)}
+    .post-card .media img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+    .post-card:hover .media img{transform:scale(1.05)}
+    .post-card .body{display:flex;flex-direction:column;flex:1;padding:22px 24px 24px}
+    .post-card .cat{align-self:flex-start;font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--btm-teal-2);background:rgba(29,158,143,.1);padding:5px 11px;border-radius:999px;margin-bottom:14px}
+    .post-card h2{font-size:1.26rem;line-height:1.28;margin:0 0 10px}
+    .post-card h2 a{color:var(--btm-navy)}
+    .post-card h2 a:hover{color:var(--btm-teal-2);text-decoration:none}
+    .post-card .excerpt{color:var(--btm-slate);font-size:1rem;margin:0 0 18px}
+    .post-card .meta{display:flex;align-items:center;gap:8px;color:#8595aa;font-size:.85rem;margin:0 0 16px}
+    .post-card .meta .dot{width:4px;height:4px;border-radius:50%;background:#c2ccdb}
+    .post-card .meta .author{color:var(--btm-slate);font-weight:600}
+    .post-card .read-more{margin-top:auto;display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:.95rem;color:var(--btm-teal-2)}
+    .post-card .read-more svg{width:16px;height:16px;transition:transform .18s ease}
+    .post-card:hover .read-more svg{transform:translateX(3px)}
+    /* Signup band */
+    .signup-band{padding:56px 0 0}
+    .signup{background:linear-gradient(135deg,var(--btm-navy) 0%,var(--btm-navy-2) 100%);border-radius:22px;color:#fff;padding:42px clamp(24px,4vw,52px);display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:center;position:relative;overflow:hidden;box-shadow:var(--btm-shadow)}
+    .signup::after{content:"";position:absolute;inset:0;background:radial-gradient(360px 240px at 100% 0%,rgba(29,158,143,.4),transparent 60%);pointer-events:none}
+    .signup>*{position:relative}
+    .signup h2{color:#fff;font-size:clamp(1.5rem,2.8vw,1.95rem);margin:0 0 8px}
+    .signup .sub{color:#c7d4e8;margin:0;font-size:1.05rem}
+    .signup form{display:flex;flex-wrap:wrap;gap:12px}
+    .signup .field{flex:1 1 220px;min-width:0}
+    .signup label{display:block;font-size:.82rem;font-weight:600;color:#c7d4e8;margin-bottom:6px}
+    .signup input[type=email]{width:100%;padding:14px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.08);color:#fff;font-size:1rem;font-family:inherit}
+    .signup input[type=email]::placeholder{color:#93a6bd}
+    .signup input[type=email]:focus{outline:3px solid var(--btm-teal);outline-offset:2px;background:rgba(255,255,255,.14)}
+    .signup .submit-wrap{display:flex;align-items:flex-end}
+    .signup .note{margin:14px 0 0;font-size:.82rem;color:#93a6bd}
+    /* CTA band */
+    .cta-band{background:radial-gradient(120% 140% at 0% 0%,var(--btm-teal-2) 0%,var(--btm-navy) 60%);color:#fff;margin-top:64px}
+    .cta-band .inner{max-width:var(--btm-maxw);margin:0 auto;padding:58px 24px;text-align:center}
+    .cta-band h2{color:#fff;font-size:clamp(1.6rem,3.4vw,2.3rem);margin:0 0 12px}
+    .cta-band p{color:#dbe6f5;max-width:620px;margin:0 auto 26px;font-size:1.08rem}
+    .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    /* Footer */
+    .site-footer{background:#081a31;color:#aebfd6;padding:56px 0 26px;margin-top:0}
+    .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:36px}
+    .site-footer .brand{color:#fff}
+    .site-footer h4{color:#fff;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;margin:0 0 14px}
+    .footer-about{margin:14px 0 0;color:#9fb2cc;font-size:.95rem;max-width:300px}
+    .footer-list{list-style:none;margin:0;padding:0}
+    .footer-list li{margin:0 0 10px}
+    .footer-list a{color:#aebfd6;font-weight:500}
+    .footer-list a:hover{color:#fff;text-decoration:none}
+    .footer-contact{font-style:normal;color:#aebfd6;font-size:.95rem;line-height:1.8}
+    .footer-contact a{color:#aebfd6}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.85rem;color:#7e93b3}
+    :focus-visible{outline:3px solid var(--btm-teal);outline-offset:2px;border-radius:6px}
+    @media (max-width:920px){
+      .blog-grid{grid-template-columns:1fr 1fr}
+      .signup{grid-template-columns:1fr;gap:22px}
+    }
+    @media (max-width:860px){
+      .footer-grid{grid-template-columns:1fr 1fr}
+      .nav-links{display:none}
+    }
+    @media (max-width:620px){
+      .blog-grid{grid-template-columns:1fr}
+      .signup form{flex-direction:column}
+      .signup .submit-wrap .btn{width:100%}
+    }
+    @media (max-width:560px){
+      .footer-grid{grid-template-columns:1fr}
+    }
+  </style>
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+  <!-- ============ CANONICAL HEADER ============ -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Bill The Max home">
+        <span class="brand-mark" aria-hidden="true"><span>B</span></span>
+        <span>Bill The Max</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="specialties.html">Specialties</a></li>
+        <li><a href="blog.html" class="active" aria-current="page">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a class="btn btn-primary btn-sm" href="contact.html">Free Audit</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-controls="nav-links" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="blog-hero" aria-labelledby="blog-hero-title">
+      <div class="inner">
+        <span class="eyebrow">Billing Insights</span>
+        <h1 id="blog-hero-title">Insights from the Bill The Max team</h1>
+        <p>Practical guidance on billing, denials, revenue-cycle management, and getting paid faster — written for the practice owners, office managers, doctors, and dentists who keep care running.</p>
+      </div>
+    </section>
+
+    <!-- ============ BLOG GRID ============ -->
+    <section class="blog-section" aria-labelledby="latest-title">
+      <div class="container">
+        <h2 id="latest-title" class="sr-only">Latest articles</h2>
+        <div class="blog-grid">
+
+          <!-- Card 1 -->
+          <article class="post-card">
+            <a class="media" href="blog-claim-denials.html" tabindex="-1" aria-hidden="true">
+              <img
+                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=900&q=80"
+                alt="A billing specialist reviewing stacks of insurance paperwork and denial notices at a desk"
+                loading="lazy" width="900" height="563">
+            </a>
+            <div class="body">
+              <span class="cat">Denials</span>
+              <h2><a href="blog-claim-denials.html">6 Reasons Insurance Claims Get Denied (and How to Prevent Each One)</a></h2>
+              <p class="excerpt">Most denials trace back to a short list of preventable errors. Here are the six most common culprits — and the practical habits that stop each one before it costs you.</p>
+              <div class="meta">
+                <span class="author">Bill The Max Team</span>
+                <span class="dot" aria-hidden="true"></span>
+                <time datetime="2026-06-25">June 25, 2026</time>
+              </div>
+              <a class="read-more" href="blog-claim-denials.html">
+                Read more
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="post-card">
+            <a class="media" href="blog-what-is-rcm.html" tabindex="-1" aria-hidden="true">
+              <img
+                src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=900&q=80"
+                alt="Finance charts and a laptop showing revenue trends on a clinic administrator's desk"
+                loading="lazy" width="900" height="563">
+            </a>
+            <div class="body">
+              <span class="cat">RCM Basics</span>
+              <h2><a href="blog-what-is-rcm.html">What Is Revenue Cycle Management? A Plain-English Guide for Practices</a></h2>
+              <p class="excerpt">From scheduling to the final paid claim, RCM is the financial backbone of your practice. We break down each stage in plain language — and show where revenue tends to slip away.</p>
+              <div class="meta">
+                <span class="author">Bill The Max Team</span>
+                <span class="dot" aria-hidden="true"></span>
+                <time datetime="2026-05-14">May 14, 2026</time>
+              </div>
+              <a class="read-more" href="blog-what-is-rcm.html">
+                Read more
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="post-card">
+            <a class="media" href="blog-credentialing.html" tabindex="-1" aria-hidden="true">
+              <img
+                src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=900&q=80"
+                alt="A calculator, documents, and a pen on a desk used for provider credentialing paperwork"
+                loading="lazy" width="900" height="563">
+            </a>
+            <div class="body">
+              <span class="cat">Credentialing</span>
+              <h2><a href="blog-credentialing.html">Provider Credentialing 101: Why It Matters and How to Avoid Costly Delays</a></h2>
+              <p class="excerpt">Credentialing decides whether you can bill a payer at all — and delays can stall cash flow for months. Here's what the process involves and how to keep it moving.</p>
+              <div class="meta">
+                <span class="author">Bill The Max Team</span>
+                <span class="dot" aria-hidden="true"></span>
+                <time datetime="2026-04-02">April 2, 2026</time>
+              </div>
+              <a class="read-more" href="blog-credentialing.html">
+                Read more
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EMAIL SIGNUP BAND ============ -->
+    <section class="signup-band" aria-labelledby="signup-title">
+      <div class="container">
+        <div class="signup">
+          <div>
+            <h2 id="signup-title">Get billing tips in your inbox</h2>
+            <p class="sub">Short, practical notes on denials, coding, and getting paid faster — sent to practice owners and office managers. No spam, unsubscribe anytime.</p>
+          </div>
+          <div>
+            <form action="https://formsubmit.co/info@billthemax.com" method="POST">
+              <input type="hidden" name="_subject" value="New billing-tips newsletter signup">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_captcha" value="false">
+              <div class="field">
+                <label for="signup-email">Email address</label>
+                <input type="email" id="signup-email" name="email" placeholder="you@yourpractice.com" autocomplete="email" required>
+              </div>
+              <div class="submit-wrap">
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+              </div>
+              <p class="note">By subscribing you agree to receive occasional billing tips from Bill The Max.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA BAND ============ -->
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="inner">
+        <h2 id="cta-title">Want these results in your own practice?</h2>
+        <p>Let Bill The Max audit your billing for free. We'll show you exactly where revenue is leaking and how to seal it — faster payments, fewer denials, full transparency.</p>
+        <div class="cta-actions">
+          <a class="btn btn-light btn-lg" href="contact.html">Get a Free Practice Audit</a>
+          <a class="btn btn-ghost btn-lg" href="contact.html">Request a Free Consultation</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ CANONICAL FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Bill The Max home">
+            <span class="brand-mark" aria-hidden="true"><span>B</span></span>
+            <span>Bill The Max</span>
+          </a>
+          <p class="footer-about">Premium medical &amp; dental billing and revenue-cycle management for practices nationwide. Maximum reimbursement. Minimum hassle.</p>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="specialties.html">Specialties</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get Started</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Free Practice Audit</a></li>
+            <li><a href="contact.html">Request a Consultation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <address class="footer-contact">
+            183 Wilson Street, Suite 230<br>
+            Brooklyn, NY 11211<br>
+            <a href="mailto:info@billthemax.com">info@billthemax.com</a><br>
+            Fax: (732) 992-3363
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year">2026</span> Bill The Max. All rights reserved.</span>
+        <span>HIPAA-compliant medical &amp; dental billing &middot; Brooklyn, NY</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

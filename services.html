@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services — Revenue Cycle Management, Medical &amp; Dental Billing | Bill The Max</title>
+  <meta name="description" content="End-to-end revenue cycle management for medical and dental practices: billing, claims submission and scrubbing, coding and audits, A/R management, denial appeals, credentialing, eligibility checks, prior authorizations, out-of-network revenue maximization, patient billing, and reporting. Brooklyn, NY — serving practices nationwide.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Tiny page-specific tweaks only. All structural styling lives in the shared styles.css. -->
+  <style>
+    .svc-hero {
+      background:
+        radial-gradient(620px 360px at 88% -8%, rgba(25,163,163,.30), transparent 60%),
+        radial-gradient(460px 300px at 4% 110%, rgba(240,168,60,.16), transparent 60%),
+        linear-gradient(135deg, var(--navy) 0%, var(--navy-600) 100%);
+      color: #d8e3f0;
+    }
+    .svc-hero .container { padding-top: 76px; padding-bottom: 76px; }
+    .svc-hero h1 { color: #fff; max-width: 16ch; }
+    .svc-hero .lead { color: #c8d6e6; max-width: 60ch; }
+    .svc-hero .eyebrow { color: var(--gold); }
+    .svc-hero .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 26px; }
+    .svc-hero .hero-trust {
+      display: flex; flex-wrap: wrap; gap: 12px 22px;
+      margin-top: 30px; padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,.16);
+      list-style: none; padding-left: 0;
+    }
+    .svc-hero .hero-trust li { display: inline-flex; align-items: center; gap: 9px; font-size: .95rem; color: #cdd9e6; }
+    .svc-hero .hero-trust svg { width: 19px; height: 19px; color: var(--gold); flex: 0 0 auto; }
+
+    /* Service card icon — composes on top of shared .card */
+    .svc-card { display: flex; flex-direction: column; height: 100%; }
+    .svc-icon {
+      width: 50px; height: 50px;
+      border-radius: 13px;
+      background: var(--teal-050);
+      color: var(--teal-600);
+      display: grid; place-items: center;
+      margin-bottom: 16px;
+    }
+    .svc-icon svg { width: 26px; height: 26px; }
+    .svc-card h3 { margin: 0 0 8px; font-size: 1.18rem; }
+    .svc-card > p { color: var(--slate); font-size: 1rem; margin: 0 0 14px; }
+    .svc-card .svc-benefits { list-style: none; margin: auto 0 0; padding: 14px 0 0; border-top: 1px solid var(--line); }
+    .svc-card .svc-benefits li {
+      position: relative; padding-left: 26px; margin-bottom: 8px;
+      font-size: .93rem; color: var(--slate);
+    }
+    .svc-card .svc-benefits li:last-child { margin-bottom: 0; }
+    .svc-card .svc-benefits li::before {
+      content: ""; position: absolute; left: 0; top: 6px;
+      width: 16px; height: 16px; border-radius: 5px;
+      background: var(--teal-050);
+    }
+    .svc-card .svc-benefits li::after {
+      content: ""; position: absolute; left: 4px; top: 9px;
+      width: 8px; height: 5px;
+      border-left: 2px solid var(--teal-600);
+      border-bottom: 2px solid var(--teal-600);
+      transform: rotate(-45deg);
+    }
+
+    /* 4-up grid that collapses cleanly */
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+    @media (max-width: 1040px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px)  { .grid-4 { grid-template-columns: 1fr; } }
+
+    /* split media for the optional image rows */
+    .svc-split { display: grid; grid-template-columns: 1.05fr .95fr; gap: 44px; align-items: center; }
+    @media (max-width: 860px) { .svc-split { grid-template-columns: 1fr; gap: 28px; } }
+    .svc-split img { width: 100%; height: 100%; max-height: 420px; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); }
+    .svc-split .pill { margin-bottom: 14px; }
+
+    /* expectations list */
+    .expect-list { list-style: none; margin: 18px 0 0; padding: 0; }
+    .expect-list li {
+      position: relative; padding: 14px 0 14px 40px;
+      border-bottom: 1px solid var(--line); color: var(--ink);
+    }
+    .expect-list li:last-child { border-bottom: 0; }
+    .expect-list li strong { color: var(--navy-700); }
+    .expect-list li::before {
+      content: ""; position: absolute; left: 2px; top: 17px;
+      width: 22px; height: 22px; border-radius: 7px;
+      background: linear-gradient(135deg, var(--teal) 0%, var(--navy-600) 100%);
+    }
+    .expect-list li::after {
+      content: ""; position: absolute; left: 9px; top: 22px;
+      width: 8px; height: 5px;
+      border-left: 2px solid #fff; border-bottom: 2px solid #fff;
+      transform: rotate(-45deg);
+    }
+  </style>
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+  <!-- ============ CANONICAL HEADER ============ -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Bill The Max home">
+        <span class="brand-mark" aria-hidden="true"><span>B</span></span>
+        <span>Bill The Max</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active" aria-current="page">Services</a></li>
+        <li><a href="specialties.html">Specialties</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a class="btn btn-primary btn-sm" href="contact.html">Free Audit</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-controls="nav-links" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="svc-hero" aria-labelledby="svc-hero-title">
+      <div class="container">
+        <span class="eyebrow">Our Services</span>
+        <h1 id="svc-hero-title">Revenue cycle management built to maximize every claim</h1>
+        <p class="lead">From the moment a patient is scheduled to the day the payment posts, Bill The Max manages the entire billing lifecycle for medical and dental practices. Cleaner claims, fewer denials, faster reimbursement — and complete visibility into every dollar you've earned.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold btn-lg" href="contact.html">Get a Free Practice Audit</a>
+          <a class="btn btn-ghost-light btn-lg" href="contact.html">Request a Free Consultation</a>
+        </div>
+        <ul class="hero-trust">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            HIPAA-compliant by design
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            End-to-end RCM, fully managed
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            Faster payments, full transparency
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES GRID ============ -->
+    <section class="section" aria-labelledby="svc-grid-title">
+      <div class="container">
+        <div class="center maxw-prose mx-auto" style="margin-bottom:48px;">
+          <span class="eyebrow">What we do</span>
+          <h2 id="svc-grid-title">A complete billing department, without the overhead</h2>
+          <p class="lead">Choose the services you need or hand us the entire revenue cycle. Either way, the goal is the same: maximum reimbursement with minimum hassle for your team.</p>
+        </div>
+
+        <div class="grid grid-4">
+
+          <!-- 1. Revenue Cycle Management -->
+          <article class="card svc-card">
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg>
+            </div>
+            <h3>Revenue Cycle Management</h3>
+            <p>We own the full lifecycle — from scheduling and eligibility through coding, submission, payment posting, and follow-up. One accountable partner for every stage, working as an extension of your front desk and back office.</p>
+            <ul class="svc-benefits">
+              <li>End-to-end ownership of every claim</li>
+              <li>Fewer handoffs, fewer leaks</li>
+              <li>One dashboard for the whole cycle</li>
+            </ul>
+          </article>
+
+          <!-- 2. Medical & Dental Billing -->
+          <article class="card svc-card">
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 15h4"/></svg>
+            </div>
+            <h3>Medical &amp; Dental Billing</h3>
+            <p>Whether you run a clinic, a specialty practice, or a dental office, we bill it accurately and on time. Our team knows the difference between CMS-1500 and ADA claim workflows and bills each on its own rules.</p>
+            <ul class="svc-benefits">
+              <li>Medical and dental claim expertise</li>
+              <li>Daily, on-time submissions</li>
+              <li>Accurate charge entry every visit</li>
+            </ul>
+          </article>
+
+          <!-- 3. Claims Submission & Scrubbing -->
+          <article class="card svc-card">
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 5-3.5 7.5-8.5 9C7.5 19.5 4 17 4 12V6l8-3 8 3v6z"/></svg>
+            </div>
+            <h3>Claims Submission &amp; Scrubbing</h3>
+            <p>Every claim is scrubbed against payer-specific edits before it ever leaves our system. We catch the coding, modifier, and field errors that trigger rejections, so your clean-claim rate stays high.</p>
+            <ul class="svc-benefits">
+              <li>Pre-submission scrubbing on 100% of claims</li>
+              <li>Higher first-pass acceptance</li>
+              <li>Electronic submission to all major payers</li>
+            </ul>
+          </article>
+
+          <!-- 4. Medical Coding & Audits -->
+          <article class="card svc-card">
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 16-4-4 4-4"/><path d="m16 8 4 4-4 4"/><path d="m14 4-4 16"/></svg>
+            </div>
+            <h3>Medical Coding &amp; Audits</h3>
+            <p>Certified coders assign accurate CPT, ICD-10, and HCPCS codes backed by your documentation — no upcoding, no leaving money behind. Regular audits keep you compliant and protect against costly clawbacks.</p>
+            <ul class="svc-benefits">
+              <li>Certified, specialty-aware coders</li>
+              <li>Documentation-supported code selection</li>
+              <li>Routine compliance audits</li>
+            </ul>
+          </article>
+
+          <!-- 5. A/R Management -->
+          <article class="card svc-card">
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+            </div>
+            <h3>Accounts Receivable (A/R) Management</h3>
+            <p>Aging claims don't sit on a shelf. We work your A/R systematically — oldest and highest-value first — chasing unpaid and underpaid claims until they resolve, so cash flow stays steady.</p>
+            <ul class="svc-benefits">
+              <li>Proactive aging-bucket workouts</li>
+              <li>Recovery of underpaid claims</li>
+              <li>Shorter days in A/R</li>
+            </ul>
+          </article>
+
+          <!-- 6. Denial Management & Appeals -->
+          <article class="card svc-card">
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4v6c0 5-4 8-9 9-5-1-9-4-9-9z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h3>Denial Management &amp; Appeals</h3>
+            <p>We don't just rework denials — we root-cause them so they stop recurring. Each denial is tracked, categorized, and appealed with the documentation payers need to overturn it.</p>
+            <ul class="svc-benefits">
+              <li>Root-cause analysis on every denial</li>
+              <li>Timely, evidence-backed appeals</li>
+              <li>Fewer repeat denials over time</li>
+            </ul>
+          </article>
+
+          <!-- 7. Credentialing & Provider Enrollment -->
+          <article class="card svc-card">
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M5 21a7 7 0 0 1 14 0"/><path d="m17 3 1.5 1.5L21 2"/></svg>
+            </div>
+            <h3>Credentialing &amp; Provider Enrollment</h3>
+            <p>Getting providers in-network is tedious and slow — so we handle it. From CAQH maintenance to payer enrollment and revalidations, we keep your providers credentialed and billable.</p>
+            <ul class="svc-benefits">
+              <li>New-provider enrollment, start to finish</li>
+              <li>CAQH and revalidation upkeep</li>
+              <li>Faster time to first reimbursement</li>
+            </ul>
+          </article>
+
+          <!-- 8. Eligibility & Benefits Verification -->
+          <article class="card svc-card">
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/><circle cx="8" cy="14" r="1.4"/><path d="M13 13h5M13 16h3"/></svg>
+            </div>
+            <h3>Eligibility &amp; Benefits Verification</h3>
+            <p>We confirm active coverage, deductibles, copays, and patient responsibility before the visit — not after a denial. Your front desk knows exactly what to collect and the claim goes out clean.</p>
+            <ul class="svc-benefits">
+              <li>Real-time checks ahead of appointments</li>
+              <li>Accurate patient-responsibility estimates</li>
+              <li>Fewer coverage-related denials</li>
+            </ul>
+          </article>
+
+          <!-- 9. Prior Authorizations -->
+          <article class="card svc-card">
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg>
+            </div>
+            <h3>Prior Authorizations</h3>
+            <p>We secure the approvals payers require before services are rendered, then make sure the auth number follows the claim through. No missed authorizations, no avoidable write-offs.</p>
+            <ul class="svc-benefits">
+              <li>Auth tracking by payer and service</li>
+              <li>Early starts to beat slow turnarounds</li>
+              <li>Auth numbers carried to the claim</li>
+            </ul>
+          </article>
+
+          <!-- 10. Out-of-Network Revenue Maximization -->
+          <article class="card svc-card">
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3>Out-of-Network Revenue Maximization</h3>
+            <p>Out-of-network claims leave the most money on the table when handled carelessly. We negotiate, document, and appeal to recover the maximum allowable on every OON encounter.</p>
+            <ul class="svc-benefits">
+              <li>Strategic OON claim handling</li>
+              <li>Payer negotiations and appeals</li>
+              <li>Higher recovery per encounter</li>
+            </ul>
+          </article>
+
+          <!-- 11. Patient Billing & Support -->
+          <article class="card svc-card">
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 12h5"/></svg>
+            </div>
+            <h3>Patient Billing &amp; Support</h3>
+            <p>Clear statements, friendly support, and easy ways to pay keep patients happy and collections high. We field billing questions so your staff doesn't have to, with the same warmth you'd give yourself.</p>
+            <ul class="svc-benefits">
+              <li>Plain-language patient statements</li>
+              <li>Courteous, branded patient support</li>
+              <li>Flexible, easy payment options</li>
+            </ul>
+          </article>
+
+          <!-- 12. Reporting & Analytics -->
+          <article class="card svc-card">
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="11" width="3" height="6"/><rect x="12" y="7" width="3" height="10"/><rect x="17" y="13" width="3" height="4"/></svg>
+            </div>
+            <h3>Reporting &amp; Analytics</h3>
+            <p>You can't fix what you can't see. We deliver clear, regular reporting on collections, denials, A/R, and payer performance — in plain language, so you always know exactly how your revenue is moving.</p>
+            <ul class="svc-benefits">
+              <li>Transparent monthly performance reports</li>
+              <li>Denial and payer-trend insights</li>
+              <li>KPIs that drive real decisions</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OPTIONAL IMAGE SPLIT ============ -->
+    <section class="section section-mist" aria-labelledby="svc-img-title">
+      <div class="container">
+        <div class="svc-split">
+          <div>
+            <span class="pill">Built around your team</span>
+            <h2 id="svc-img-title">We plug into the way your practice already works</h2>
+            <p class="lead">No rip-and-replace. Bill The Max works inside your existing practice management system and EHR, mirroring your workflows and reporting back in language your team actually understands.</p>
+            <p class="muted">Your staff keeps doing what they do best — caring for patients — while we handle the claims, the follow-up, and the payers. You get a dedicated point of contact, predictable communication, and revenue you can count on.</p>
+            <a class="btn btn-primary mt-2" href="contact.html">See how it would work for you</a>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&q=80"
+            alt="A healthcare professional reviewing patient billing information on a tablet at a clinic desk"
+            loading="lazy" width="1200" height="800">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW WE WORK (4 STEPS) ============ -->
+    <section class="section" aria-labelledby="how-title">
+      <div class="container">
+        <div class="center maxw-prose mx-auto" style="margin-bottom:40px;">
+          <span class="eyebrow">How we work</span>
+          <h2 id="how-title">A simple, transparent path to better collections</h2>
+          <p class="lead">Getting started is straightforward, and you'll know exactly what's happening at every stage.</p>
+        </div>
+
+        <ol class="steps mx-auto" style="max-width:840px;">
+          <li>
+            <h3>Free practice audit</h3>
+            <p>We review your current billing, A/R, and denial data to find exactly where revenue is leaking — then show you the dollars on the table. No cost, no obligation.</p>
+          </li>
+          <li>
+            <h3>Tailored onboarding</h3>
+            <p>We connect to your practice management system, map your workflows, set up payer credentials, and assign your dedicated team. A clear plan, a clean handoff, zero disruption to patient care.</p>
+          </li>
+          <li>
+            <h3>We run your revenue cycle</h3>
+            <p>Eligibility checks, coding, scrubbing, submission, payment posting, denials, and appeals — handled daily by specialists who treat your money like their own.</p>
+          </li>
+          <li>
+            <h3>Reporting &amp; continuous improvement</h3>
+            <p>You receive clear, regular performance reports and a standing line of communication. We keep tightening the process so collections climb and denials keep falling.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ WHAT YOU CAN EXPECT (RESULTS) ============ -->
+    <section class="section section-navy" aria-labelledby="expect-title">
+      <div class="container">
+        <div class="center maxw-prose mx-auto" style="margin-bottom:40px;">
+          <span class="eyebrow">What you can expect</span>
+          <h2 id="expect-title">Results you can see in your bank account</h2>
+          <p class="lead" style="color:#c8d6e6;">When the whole revenue cycle is managed with discipline and transparency, the numbers move in the right direction — and stay there.</p>
+        </div>
+
+        <div class="stat-strip" style="margin-bottom:40px;">
+          <div class="stat">
+            <div class="num" style="color:#fff;">98%</div>
+            <div class="lbl" style="color:#aebed0;">First-pass clean-claim rate we aim for</div>
+          </div>
+          <div class="stat">
+            <div class="num" style="color:#fff;">Faster</div>
+            <div class="lbl" style="color:#aebed0;">Payments, with shorter days in A/R</div>
+          </div>
+          <div class="stat">
+            <div class="num" style="color:#fff;">100%</div>
+            <div class="lbl" style="color:#aebed0;">Visibility into your collections, every month</div>
+          </div>
+        </div>
+
+        <div class="card mx-auto" style="max-width:840px;">
+          <ul class="expect-list">
+            <li><strong>Higher net collections.</strong> Cleaner claims, fewer write-offs, and recovered underpayments mean more of what you earned actually lands in your account.</li>
+            <li><strong>Fewer denials, faster resolution.</strong> Prevention up front and disciplined appeals on the back end keep denials low and turn the unavoidable ones around quickly.</li>
+            <li><strong>Predictable cash flow.</strong> Daily submissions and systematic A/R work smooth out the peaks and valleys so payroll and planning get easier.</li>
+            <li><strong>Less administrative burden.</strong> Your team stops chasing payers and answering billing calls, and gets time back for patients.</li>
+            <li><strong>Complete transparency.</strong> Plain-language reporting and a dedicated contact mean you're never in the dark about your own revenue.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA BAND ============ -->
+    <section class="section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-band">
+          <span class="eyebrow">Ready when you are</span>
+          <h2 id="cta-title">Find out what your practice is leaving on the table</h2>
+          <p>Start with a free practice audit. We'll review your billing, show you exactly where revenue is slipping away, and lay out how to fix it — maximum reimbursement, minimum hassle.</p>
+          <div class="cta-actions">
+            <a class="btn btn-gold btn-lg" href="contact.html">Get a Free Practice Audit</a>
+            <a class="btn btn-ghost-light btn-lg" href="contact.html">Request a Free Consultation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ CANONICAL FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Bill The Max home">
+            <span class="brand-mark" aria-hidden="true"><span>B</span></span>
+            <span>Bill The Max</span>
+          </a>
+          <p class="footer-about">Premium medical &amp; dental billing and revenue-cycle management for practices nationwide. Maximum reimbursement. Minimum hassle.</p>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="specialties.html">Specialties</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get Started</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Free Practice Audit</a></li>
+            <li><a href="contact.html">Request a Consultation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <address class="footer-contact">
+            183 Wilson Street, Suite 230<br>
+            Brooklyn, NY 11211<br>
+            <a href="mailto:info@billthemax.com">info@billthemax.com</a><br>
+            Fax: (732) 992-3363
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year">2026</span> Bill The Max. All rights reserved.</span>
+        <span>HIPAA-compliant medical &amp; dental billing &middot; Brooklyn, NY</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
