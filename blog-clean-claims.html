@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clean Claims: A Step-by-Step Guide to First-Pass Acceptance | Bill The Max</title>
+  <meta name="description" content="What a clean claim is, why first-pass acceptance rate matters, the claim lifecycle from charge capture to payment, a pre-submission checklist, rejections vs denials, and how scrubbing plus human review work together. From Bill The Max." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+  <!-- ============== CANONICAL HEADER ============== -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Bill The Max home">
+        <span class="brand-mark" aria-hidden="true"><span>B</span></span>
+        <span>Bill The Max</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="specialties.html">Specialties</a></li>
+        <li><a href="blog.html" class="active" aria-current="page">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a class="btn btn-primary btn-sm" href="contact.html">Free Audit</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-controls="nav-links" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============== ARTICLE HERO ============== -->
+    <section class="article-hero">
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a> &nbsp;/&nbsp;
+          <a href="blog.html">Blog</a> &nbsp;/&nbsp;
+          <span>Clean Claims</span>
+        </nav>
+
+        <div class="article-meta">
+          <span class="pill">Claims</span>
+          <span class="dot">•</span>
+          <span>Bill The Max Team</span>
+          <span class="dot">•</span>
+          <span>May 28, 2026</span>
+          <span class="dot">•</span>
+          <span>7 min read</span>
+        </div>
+
+        <h1 class="article-title">Clean Claims: A Step-by-Step Guide to First-Pass Acceptance</h1>
+        <p class="lead">Every claim that pays on the first try is cash in the bank on schedule. Every one that bounces is rework, delay, and risk. The difference usually comes down to what happens before you ever hit submit.</p>
+
+        <figure class="hero-figure">
+          <img
+            src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1400&q=80"
+            alt="A medical billing professional reviewing an insurance claim form and financial paperwork at a desk with a calculator and laptop."
+            loading="eager" width="1400" height="460" />
+          <figcaption>A clean claim is built before submission — not fixed afterward.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============== ARTICLE BODY ============== -->
+    <article class="section">
+      <div class="container">
+        <div class="prose">
+
+          <h2 id="what-it-is">What a "clean claim" actually is</h2>
+          <p>A <strong>clean claim</strong> arrives complete, accurate, and compliant — nothing missing, no coding errors, nothing that forces a kick-back. It carries everything needed to adjudicate on the first pass: correct patient and insurance details, valid codes, proper modifiers, any required authorization, and a provider in good standing.</p>
+          <p>The metric that tracks this is your <strong>first-pass acceptance rate</strong> (or clean claim rate) — the share of claims accepted and paid without rework. Every claim that <em>doesn't</em> clear costs you twice: the labor to fix it, plus the days it sits unpaid. A high rate means faster payment, lower A/R, and less time chasing money you already earned.</p>
+
+          <h2 id="lifecycle">The claim lifecycle, start to finish</h2>
+          <p>A clean claim is the product of a chain from the front desk to a posted payment. Knowing it shows where errors creep in:</p>
+          <ul>
+            <li><strong>Charge capture.</strong> Services become billable charges; a missed service or wrong date here follows the claim through.</li>
+            <li><strong>Coding.</strong> Diagnoses and procedures get ICD-10, CPT, and HCPCS codes plus modifiers — the visit in the payer's language.</li>
+            <li><strong>Claim creation.</strong> Charges, codes, demographics, and insurance are assembled into a claim (an 837 file, or CMS-1500 / UB-04 on paper).</li>
+            <li><strong>Scrubbing &amp; submission.</strong> The claim is checked against payer rules, corrected, and transmitted via a clearinghouse.</li>
+            <li><strong>Adjudication.</strong> The payer pays, reduces, or denies it, returning a remittance advice that explains the outcome.</li>
+            <li><strong>Posting &amp; follow-up.</strong> Payment is posted, the patient balance billed, and denials or underpayments worked.</li>
+          </ul>
+
+          <h2 id="checklist">A step-by-step pre-submission checklist</h2>
+          <p>The biggest lever on your first-pass rate is what you verify <em>before</em> the claim goes out:</p>
+
+          <ol class="steps">
+            <li>
+              <h3>Verify patient demographics</h3>
+              <p>Confirm name, date of birth, address, and subscriber/policy ID exactly as on the card — a transposed digit is a top reason claims reject.</p>
+            </li>
+            <li>
+              <h3>Check eligibility and benefits</h3>
+              <p>Run a real-time eligibility check before the visit to confirm active coverage, the correct payer, and that the service is covered — a termed plan caught now prevents a denial.</p>
+            </li>
+            <li>
+              <h3>Confirm coding accuracy</h3>
+              <p>Make sure every diagnosis and procedure code is current, valid, supported by documentation, and that the diagnosis justifies the procedure (medical necessity).</p>
+            </li>
+            <li>
+              <h3>Apply the right modifiers</h3>
+              <p>Modifiers flag special circumstances — bilateral, distinct, reduced, or repeated services. Missing or wrong ones drive denials.</p>
+            </li>
+            <li>
+              <h3>Secure authorizations and referrals</h3>
+              <p>Confirm any required prior authorization or referral is on file and its number is on the claim. No payer pays for approval it never gave.</p>
+            </li>
+            <li>
+              <h3>Account for payer-specific edits</h3>
+              <p>Build each payer's rules — bundling, frequency limits, place-of-service, timely filing — in, so a claim clean for one isn't dirty for another.</p>
+            </li>
+            <li>
+              <h3>Run the claim through scrubbing</h3>
+              <p>Pass the finished claim through scrubbing edits, fix what's flagged, then submit — your last defense before the payer.</p>
+            </li>
+          </ol>
+
+          <h2 id="electronic-vs-paper">Electronic vs. paper claims</h2>
+          <p>Most claims are submitted electronically, for good reason. <strong>Electronic claims</strong> (the 837 transaction) move through a clearinghouse that validates them up front, are tracked at every hop, and adjudicate faster — often within days, with acknowledgment files that flag problems fast.</p>
+          <p><strong>Paper claims</strong> (CMS-1500 for professional, UB-04 for institutional) still exist for the rare payer that requires them, but they're slower, easier to lose, and have no automated error checking. If you can submit electronically, you almost always should.</p>
+
+          <h2 id="rejections-vs-denials">Rejections vs. denials — they're not the same</h2>
+          <p>Used interchangeably, but they happen at different stages:</p>
+
+          <div class="compare mt-2">
+            <div class="card">
+              <h3>Rejection</h3>
+              <ul>
+                <li class="con">Stopped <em>before</em> adjudication by the clearinghouse or payer's front end.</li>
+                <li class="con">Caused by a missing field, invalid code, or wrong member ID.</li>
+                <li class="neu">Never officially "received" by the payer's system.</li>
+                <li class="pro">Fast to fix — correct and resubmit; timely filing still applies.</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Denial</h3>
+              <ul>
+                <li class="con">Issued <em>after</em> the payer adjudicated the claim.</li>
+                <li class="con">Caused by no authorization, a non-covered service, or medical necessity.</li>
+                <li class="neu">A formal decision returned on the remittance advice with a reason code.</li>
+                <li class="pro">Slower — often needs an appeal, corrected claim, or documentation.</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="mt-2">A high first-pass rate attacks both — clean data prevents rejections, and up-front verification prevents the costlier denials.</p>
+
+          <h2 id="scrubbing-plus-human">How scrubbing software and human review work together</h2>
+          <p>The best results pair automation with judgment:</p>
+          <ul class="checklist">
+            <li>Scrubbing software runs thousands of edits in seconds — code validity, payer rules, required fields, and bundling on every claim.</li>
+            <li>It catches predictable, high-volume errors humans miss when tired or rushed.</li>
+            <li>Human reviewers handle the nuance rules can't — ambiguous documentation, unusual modifier combinations, and payer quirks that change without notice.</li>
+            <li>People feed lessons back in: every recurring denial becomes a new edit, so it doesn't repeat.</li>
+          </ul>
+
+          <h2 id="targets">Targets to aim for</h2>
+          <p>As a benchmark, a healthy practice aims for a first-pass acceptance rate in the mid-to-high 90s and treats anything below as a signal to investigate the front end. Watch a few related numbers alongside it:</p>
+          <ul>
+            <li><strong>First-pass acceptance rate</strong> — your headline metric; push toward 95%+.</li>
+            <li><strong>Denial rate</strong> — healthier in the low single digits; rising denials point to a gap upstream.</li>
+            <li><strong>Days in A/R</strong> — clean claims shrink this; a creeping number means rework is piling up.</li>
+          </ul>
+          <p>Treat these as directional — the right targets vary by specialty and payer mix. Measure consistently and trend over time.</p>
+
+          <h2 id="our-approach">How Bill The Max helps</h2>
+          <p>Lifting a first-pass rate means tightening every link from charge capture to payment. We verify eligibility before the visit, code from documentation, scrub every claim against current payer rules, and put experienced reviewers behind the software. When something denies, we work it fast and feed the lesson back into our edits — so your clean claim rate climbs and A/R falls.</p>
+
+          <h2 id="takeaways">Key takeaways</h2>
+          <div class="callout">
+            <ul class="mb-0">
+              <li>A clean claim is complete, accurate, and compliant — built before submission, not fixed afterward.</li>
+              <li>First-pass acceptance rate drives faster payment and lower A/R; aim for the mid-to-high 90s.</li>
+              <li>Most errors start early — verify demographics, eligibility, coding, modifiers, and authorizations first.</li>
+              <li>Rejections are caught before adjudication and quick to fix; denials come after and usually need an appeal.</li>
+              <li>Scrubbing plus human review beats either alone — automation for scale, people for nuance.</li>
+            </ul>
+          </div>
+
+          <hr class="divider mt-3" />
+          <p class="mt-2">
+            <a class="back-link" href="blog.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+              Back to all articles
+            </a>
+          </p>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- ============== CTA BAND ============== -->
+    <section class="section-sm">
+      <div class="container">
+        <div class="cta-band">
+          <span class="eyebrow">Maximize Every Claim</span>
+          <h2>Send cleaner claims. Get paid the first time.</h2>
+          <p>If too many of your claims are bouncing back, the fix usually lives upstream. Let Bill The Max audit your process, tighten your front end, and lift your first-pass acceptance rate. Start with a free practice audit.</p>
+          <div class="cta-actions">
+            <a class="btn btn-gold btn-lg" href="contact.html">Get a Free Practice Audit</a>
+            <a class="btn btn-ghost-light btn-lg" href="services.html">Explore our services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============== CANONICAL FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Bill The Max home">
+            <span class="brand-mark" aria-hidden="true"><span>B</span></span>
+            <span>Bill The Max</span>
+          </a>
+          <p class="footer-about">Premium medical &amp; dental billing and revenue-cycle management for practices nationwide. Maximum reimbursement. Minimum hassle.</p>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="specialties.html">Specialties</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get Started</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Free Practice Audit</a></li>
+            <li><a href="contact.html">Request a Consultation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <address class="footer-contact">
+            183 Wilson Street, Suite 230<br>
+            Brooklyn, NY 11211<br>
+            Phone: <a href="tel:+19179369446">(917) 936-9446</a><br>
+            <a href="mailto:info@billthemax.com">info@billthemax.com</a><br>
+            Fax: (732) 992-3363
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year">2026</span> Bill The Max. All rights reserved.</span>
+        <span>HIPAA-compliant medical &amp; dental billing &middot; Brooklyn, NY</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

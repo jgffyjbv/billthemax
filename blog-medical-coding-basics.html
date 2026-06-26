@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Medical Coding Basics: CPT, ICD-10, and HCPCS Explained | Bill The Max</title>
+  <meta name="description" content="A plain-English guide to medical coding: what CPT, ICD-10, and HCPCS Level II codes do, how modifiers and medical-necessity linkage work, the coding errors that trigger denials and audits, and why documentation and certified coders matter. From Bill The Max." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+  <!-- ============== CANONICAL HEADER ============== -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Bill The Max home">
+        <span class="brand-mark" aria-hidden="true"><span>B</span></span>
+        <span>Bill The Max</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="specialties.html">Specialties</a></li>
+        <li><a href="blog.html" class="active" aria-current="page">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a class="btn btn-primary btn-sm" href="contact.html">Free Audit</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-controls="nav-links" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============== ARTICLE HERO ============== -->
+    <section class="article-hero">
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a> &nbsp;/&nbsp;
+          <a href="blog.html">Blog</a> &nbsp;/&nbsp;
+          <span>Medical Coding Basics</span>
+        </nav>
+
+        <div class="article-meta">
+          <span class="pill">Coding</span>
+          <span class="dot">•</span>
+          <span>Bill The Max Team</span>
+          <span class="dot">•</span>
+          <span>June 18, 2026</span>
+          <span class="dot">•</span>
+          <span>7 min read</span>
+        </div>
+
+        <h1 class="article-title">Medical Coding Basics: CPT, ICD-10, and HCPCS Explained</h1>
+        <p class="lead">Every claim you submit is really a short story told in code. Get the codes right and you get paid; get them wrong and you collect denials, delays, and the occasional audit. Here's how the three code sets actually work together.</p>
+
+        <figure class="hero-figure">
+          <img
+            src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1400&q=80"
+            alt="A person working at a laptop with charts and data on screen, reviewing clinical and billing information."
+            loading="eager" width="1400" height="460" />
+          <figcaption>Medical coding turns the visit in the chart into the numbers a payer will reimburse.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============== ARTICLE BODY ============== -->
+    <article class="section">
+      <div class="container">
+        <div class="prose">
+
+          <h2 id="what-it-is">What medical coding is — and why it drives reimbursement</h2>
+          <p>Medical coding is the process of translating everything that happened during a patient encounter — the diagnosis, the exam, the procedure, the supplies used — into standardized codes that payers recognize. Those codes are the language of the claim. The insurer never sees your exam room; it sees a handful of numbers and decides whether, and how much, to pay based entirely on what they say.</p>
+          <p>That's why coding sits at the heart of your revenue cycle. A clinically perfect visit that's coded incorrectly will still be denied, underpaid, or flagged for review. Coding accuracy isn't a back-office formality — it's the difference between a clean claim that pays on the first pass and one that bounces, ages in accounts receivable, and eats staff time to rework. Three code sets do almost all of the heavy lifting: CPT, ICD-10, and HCPCS Level II.</p>
+
+          <h2 id="cpt">CPT codes: what you did</h2>
+          <p>CPT (Current Procedural Terminology) codes describe the <strong>services and procedures</strong> a provider performed. Maintained by the American Medical Association, they're five-digit codes that answer the question, "What did the clinician actually do?" Nearly everything you bill for a service starts here:</p>
+          <ul>
+            <li><strong>Evaluation and management (E/M)</strong> — office visits, consultations, hospital and telehealth encounters, billed at levels that reflect complexity and time.</li>
+            <li><strong>Procedures and surgeries</strong> — from a laceration repair to a colonoscopy to an orthopedic operation.</li>
+            <li><strong>Diagnostic and lab services</strong> — imaging, EKGs, pathology, and other tests.</li>
+            <li><strong>Preventive and immunization services</strong> — wellness visits, screenings, and vaccine administration.</li>
+          </ul>
+          <p>The CPT code drives the dollar amount on the claim. Choosing a level that doesn't match what the documentation supports — too high or too low — is one of the most common ways practices either lose revenue or invite scrutiny.</p>
+
+          <h2 id="icd-10">ICD-10 codes: why you did it</h2>
+          <p>If CPT says what you did, <strong>ICD-10-CM</strong> codes say <em>why</em>. These are the diagnosis codes — alphanumeric and highly specific — that describe the patient's condition. ICD-10 is granular by design: there are codes that capture laterality (left vs. right), the encounter type (initial vs. subsequent), and the specific anatomy or stage of a condition.</p>
+          <p>The critical concept here is <strong>medical necessity linkage</strong>. A payer doesn't just want to know what procedure you performed; it wants proof the procedure was warranted by the diagnosis. On the claim, you link each CPT service to the ICD-10 code(s) that justify it. If the diagnosis doesn't support the service — say, an advanced imaging study tied to a vague or unrelated complaint — the payer will deny it as not medically necessary, no matter how well the procedure itself was coded.</p>
+
+          <h2 id="hcpcs">HCPCS Level II: what you used or supplied</h2>
+          <p>CPT (technically HCPCS Level I) covers professional services, but it doesn't capture everything. <strong>HCPCS Level II</strong> codes — maintained by CMS — fill the gap for items and services that fall outside the CPT system, particularly for Medicare, Medicaid, and many commercial payers. They cover:</p>
+          <ul>
+            <li><strong>Durable medical equipment (DME)</strong> — wheelchairs, walkers, braces, and similar items.</li>
+            <li><strong>Drugs and injectables</strong> — medications administered in the office, often billed alongside a CPT administration code.</li>
+            <li><strong>Supplies and prosthetics</strong> — dressings, orthotics, and other tangible goods.</li>
+            <li><strong>Certain services and transport</strong> — including ambulance services and some screenings.</li>
+          </ul>
+          <p>If your practice administers drugs, dispenses equipment, or supplies anything billable, leaving the HCPCS code off the claim means leaving money on the table.</p>
+
+          <h2 id="modifiers">Modifiers: the small codes that change everything</h2>
+          <p>Modifiers are two-character codes appended to a CPT or HCPCS code to add essential context — without changing the underlying service. They tell the payer something the base code can't, and they're frequently the deciding factor between payment and denial. Common examples include:</p>
+          <ul>
+            <li><strong>Modifier 25</strong> — a significant, separately identifiable E/M service performed on the same day as a procedure.</li>
+            <li><strong>Modifier 59</strong> — a distinct procedural service that would otherwise appear to be bundled into another.</li>
+            <li><strong>Modifiers 26 and TC</strong> — splitting the professional component from the technical component of a service.</li>
+            <li><strong>Anatomical modifiers (LT, RT, and the F/T finger and toe codes)</strong> — specifying exactly which side or digit was treated.</li>
+          </ul>
+          <p>Used correctly, modifiers ensure you're paid for distinct work. Used carelessly — or omitted when required — they trigger denials or, worse, the appearance of inflating claims. Payers watch certain modifiers closely, so they have to be supported by the documentation every single time.</p>
+
+          <h2 id="errors">Common coding errors that cause denials and audits</h2>
+          <p>Most coding problems aren't exotic. A handful of recurring mistakes account for the bulk of denials and audit flags:</p>
+          <ul>
+            <li><strong>Upcoding</strong> — billing a higher-level or more expensive code than the documentation supports. It inflates reimbursement and is a top audit and compliance risk.</li>
+            <li><strong>Downcoding</strong> — the opposite: coding too conservatively out of caution. It's quietly costly, eroding revenue you legitimately earned.</li>
+            <li><strong>Unbundling</strong> — billing separately for component services that should be reported under a single comprehensive code, which can read as an attempt to increase payment.</li>
+            <li><strong>Missing or incorrect modifiers</strong> — leaving off a required modifier (or adding one that isn't supported) is a leading cause of avoidable denials.</li>
+            <li><strong>Weak diagnosis linkage</strong> — CPT services tied to ICD-10 codes that don't establish medical necessity get denied on arrival.</li>
+            <li><strong>Outdated codes</strong> — code sets are revised regularly; billing a deleted or superseded code stops the claim cold.</li>
+          </ul>
+          <p>The pattern is clear: errors in either direction hurt. Upcoding and unbundling invite audits and recoupments; downcoding and missed codes leave earned revenue uncollected. Consistent, defensible accuracy is the goal — not aggressiveness, and not timidity.</p>
+
+          <h2 id="documentation">Documentation: the foundation under every code</h2>
+          <p>Coders can only code what the provider documents. If the chart doesn't clearly support the level of service, the diagnosis, or the modifier, the code can't stand — and "if it wasn't documented, it wasn't done" is exactly how an auditor reads it. Strong documentation describes the complexity of the visit, ties each service to a specific clinical reason, and records the supplies or medications used. When documentation and coding move in lockstep, claims pay faster and survive review. When they drift apart, even honest practices end up defending themselves.</p>
+          <p>This is also why certified, specialty-aware coders matter so much. A credentialed coder (CPC, CCS, or similar) knows the current rules, but a coder who understands <em>your</em> specialty knows its specific procedures, common modifier scenarios, and payer quirks. Cardiology, dermatology, behavioral health, and orthopedics each have coding nuances a generalist can easily miss — and those nuances are precisely where revenue and compliance risk live.</p>
+
+          <h2 id="how-we-help">How Bill The Max helps</h2>
+          <p>Our certified coders work as an extension of your practice, coding to the documentation with both accuracy and full reimbursement in mind. We pair specialty-aware coding with claim scrubbing that catches linkage gaps, missing modifiers, and outdated codes <em>before</em> the claim goes out — not after a denial comes back. The result is cleaner first-pass claims, fewer reworks, and a coding trail that holds up if a payer ever looks closely.</p>
+
+          <h2 id="takeaways">Key takeaways</h2>
+          <div class="callout">
+            <ul class="mb-0">
+              <li>CPT codes describe what you did, ICD-10 codes describe why, and HCPCS Level II covers supplies, drugs, and equipment.</li>
+              <li>Medical-necessity linkage — connecting each service to a justifying diagnosis — is essential to getting paid.</li>
+              <li>Modifiers add the context that separates payment from denial; they must always match the documentation.</li>
+              <li>Upcoding and unbundling invite audits; downcoding and missed codes quietly cost you revenue.</li>
+              <li>Coding is only as strong as the documentation beneath it — and certified, specialty-aware coders protect both your revenue and your compliance.</li>
+            </ul>
+          </div>
+
+          <hr class="divider mt-3" />
+          <p class="mt-2">
+            <a class="back-link" href="blog.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+              Back to all articles
+            </a>
+          </p>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- ============== CTA BAND ============== -->
+    <section class="section-sm">
+      <div class="container">
+        <div class="cta-band">
+          <span class="eyebrow">Maximize Every Claim</span>
+          <h2>Code it right the first time.</h2>
+          <p>Tired of denials traced back to coding? Let Bill The Max put certified, specialty-aware coders and pre-submission claim scrubbing behind every claim you send — so you collect what you've earned and stay audit-ready. Start with a free practice audit.</p>
+          <div class="cta-actions">
+            <a class="btn btn-gold btn-lg" href="contact.html">Get a Free Practice Audit</a>
+            <a class="btn btn-ghost-light btn-lg" href="services.html">Explore our services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============== CANONICAL FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Bill The Max home">
+            <span class="brand-mark" aria-hidden="true"><span>B</span></span>
+            <span>Bill The Max</span>
+          </a>
+          <p class="footer-about">Premium medical &amp; dental billing and revenue-cycle management for practices nationwide. Maximum reimbursement. Minimum hassle.</p>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="specialties.html">Specialties</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get Started</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Free Practice Audit</a></li>
+            <li><a href="contact.html">Request a Consultation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <address class="footer-contact">
+            183 Wilson Street, Suite 230<br>
+            Brooklyn, NY 11211<br>
+            Phone: <a href="tel:+19179369446">(917) 936-9446</a><br>
+            <a href="mailto:info@billthemax.com">info@billthemax.com</a><br>
+            Fax: (732) 992-3363
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year">2026</span> Bill The Max. All rights reserved.</span>
+        <span>HIPAA-compliant medical &amp; dental billing &middot; Brooklyn, NY</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

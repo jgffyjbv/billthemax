@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EOBs and ERAs Explained: Making Sense of Your Remittance | Bill The Max</title>
+  <meta name="description" content="What an EOB and an ERA (835) are, how they differ, and how to read billed vs. allowed amounts, adjustments, CARC/RARC codes, and patient responsibility — plus how accurate payment posting catches lost revenue. From Bill The Max." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+  <!-- ============== CANONICAL HEADER ============== -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Bill The Max home">
+        <span class="brand-mark" aria-hidden="true"><span>B</span></span>
+        <span>Bill The Max</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="specialties.html">Specialties</a></li>
+        <li><a href="blog.html" class="active" aria-current="page">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a class="btn btn-primary btn-sm" href="contact.html">Free Audit</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-controls="nav-links" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============== ARTICLE HERO ============== -->
+    <section class="article-hero">
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a> &nbsp;/&nbsp;
+          <a href="blog.html">Blog</a> &nbsp;/&nbsp;
+          <span>EOBs and ERAs Explained</span>
+        </nav>
+
+        <div class="article-meta">
+          <span class="pill">Payments</span>
+          <span class="dot">•</span>
+          <span>Bill The Max Team</span>
+          <span class="dot">•</span>
+          <span>March 26, 2026</span>
+          <span class="dot">•</span>
+          <span>8 min read</span>
+        </div>
+
+        <h1 class="article-title">EOBs and ERAs Explained: Making Sense of Your Remittance</h1>
+        <p class="lead">When a payer sends money, it also sends a story explaining exactly how it arrived at that number. Learn to read that story and you stop leaving revenue on the table.</p>
+
+        <figure class="hero-figure">
+          <img
+            src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1400&q=80"
+            alt="A person reviewing financial statements and an insurance remittance document while using a calculator at a desk."
+            loading="eager" width="1400" height="460" />
+          <figcaption>Every remittance is a line-by-line accounting of what the payer allowed, adjusted, and paid.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============== ARTICLE BODY ============== -->
+    <article class="section">
+      <div class="container">
+        <div class="prose">
+
+          <p>The check a payer sends rarely matches what you billed, and the difference isn't random. Every payment carries a remittance explaining, line by line, how the payer decided what to pay — in two forms, the <strong>EOB</strong> and the <strong>ERA</strong>. This is the exact step where underpayments and quiet denials either get caught or get written off.</p>
+
+          <h2 id="eob-vs-era">EOB vs. ERA: what they are and how they differ</h2>
+          <p>Both answer the same question — "here's what we did with your claim" — but in very different forms.</p>
+          <ul>
+            <li><strong>EOB (Explanation of Benefits)</strong> is the human-readable version: a paper or PDF statement summarizing how a claim was adjudicated — what was billed, allowed, and paid, and what the patient owes. Patients get their own copy (often stamped "this is not a bill"); the practice receives a provider-facing remittance advice.</li>
+            <li><strong>ERA (Electronic Remittance Advice)</strong> is the same information as a structured file on the HIPAA-standard <strong>835</strong> transaction. Built to be read by your billing software, it can post payments automatically and at scale.</li>
+          </ul>
+          <p>In short: an EOB is for reading, an ERA/835 is for processing. Enroll to receive ERAs from every payer that offers them, paired with EFT so the money and the explanation arrive together — paper EOBs should be the exception.</p>
+
+          <h2 id="how-to-read">How to read a remittance, field by field</h2>
+          <p>On an EOB or a decoded 835, the same numbers tell the whole story for each service line:</p>
+          <ul>
+            <li><strong>Billed (charged) amount</strong> — your full fee, exactly as submitted.</li>
+            <li><strong>Allowed amount</strong> — the maximum the payer recognizes under your contract; the real ceiling on payment.</li>
+            <li><strong>Contractual adjustment</strong> — the write-off between billed and allowed. For in-network claims it's expected and non-collectible. It is <em>not</em> a denial.</li>
+            <li><strong>Patient responsibility</strong> — deductible, copay, and coinsurance owed out of the allowed amount.</li>
+            <li><strong>Paid amount</strong> — what the payer actually sent: allowed minus patient responsibility and any other valid adjustments.</li>
+          </ul>
+          <p>A quick sanity check: <strong>allowed = paid + patient responsibility</strong>, and <strong>billed = allowed + contractual adjustment</strong>. When those don't balance, something was adjusted that warrants a look at the reason codes.</p>
+
+          <h2 id="reason-codes">CARC and RARC codes: the "why" behind every adjustment</h2>
+          <p>No payer reduces or denies a line without attaching a reason. On an 835 those reasons are standardized codes, and two families let you triage a remittance fast:</p>
+          <ul>
+            <li><strong>CARC — Claim Adjustment Reason Codes</strong> say <em>why an amount changed</em>. Routine ones include <strong>CO-45</strong> (charge exceeds the allowed amount), <strong>PR-1</strong> (deductible), <strong>PR-2</strong> (coinsurance), and <strong>PR-3</strong> (copay). Problem codes include <strong>CO-97</strong> (bundled), <strong>CO-16</strong> (claim lacks information), and <strong>CO-50</strong> (not medically necessary).</li>
+            <li><strong>RARC — Remittance Advice Remark Codes</strong> add detail to a CARC — a missing modifier, an authorization requirement, a timely-filing issue — usually telling you exactly what to fix.</li>
+            <li><strong>Group codes</strong> are the CARC prefix: <strong>CO</strong> (Contractual Obligation) is a write-off you can't bill anyone for, <strong>PR</strong> (Patient Responsibility) moves the balance to the patient, and <strong>OA</strong>/<strong>PI</strong> often flag a second look.</li>
+          </ul>
+          <p>The discipline that protects revenue: never assume a <strong>CO</strong> adjustment is correct. CO-45 is legitimate only if the allowed amount matches your contracted rate — if the payer "allowed" less, that CO-45 is hiding an underpayment.</p>
+
+          <h2 id="posting">How payment posting works — and why accuracy matters</h2>
+          <p>Payment posting records each remittance against the right claim and line — payment, contractual adjustment, patient responsibility, and reason codes. Done well it gives a clean picture of every account; done sloppily it corrupts your receivables file. It matters because posting:</p>
+          <ul>
+            <li><strong>Drives patient billing</strong> — a wrong patient-responsibility line bills patients for money they don't owe, or misses money they do.</li>
+            <li><strong>Triggers secondary claims</strong> — coordination of benefits depends on accurate primary posting.</li>
+            <li><strong>Exposes denials</strong> — it turns a zero-pay line with a CO-16 or CO-50 into a workable denial instead of a silent write-off.</li>
+            <li><strong>Keeps your A/R honest</strong> — misclassifying a denial as a contractual adjustment makes a problem claim vanish from your aging report, along with its revenue.</li>
+          </ul>
+
+          <h2 id="underpayments">Spotting underpayments and contractual adjustments</h2>
+          <p>This is where reading a remittance turns into recovered dollars. A contractual adjustment should bring your charge down to the agreed rate — no more — so verify the allowed amount is correct:</p>
+          <ul>
+            <li><strong>Compare allowed vs. contracted rate.</strong> Load your fee schedules so software flags any line where the payer allowed less than your contract requires.</li>
+            <li><strong>Watch for silent bundling.</strong> A CO-97 that wrongly bundles a separately payable service — often fixable with the right modifier — is lost revenue dressed as routine.</li>
+            <li><strong>Re-check downcoding.</strong> If the payer paid a lower-level code than you billed, the allowed amount drops quietly; confirm the adjudicated code matches what you submitted.</li>
+            <li><strong>Track payer patterns.</strong> A payer or CPT code that's routinely short is a contract or configuration issue worth escalating.</li>
+          </ul>
+          <p>Caught at posting, an underpayment becomes an appeal or corrected claim. Missed, it's a permanent write-off no one ever sees.</p>
+
+          <h2 id="auto-posting">Auto-posting, reconciliation, and the revenue it protects</h2>
+          <p>Because the 835 is structured data, ERAs can post automatically — software matches each line to its claim and records the payment, adjustment, and codes with no keystrokes. That's fast and accurate for clean, full-pay claims, but it's not "set it and forget it":</p>
+          <ul>
+            <li><strong>Reconcile the deposit</strong> — tie every ERA to its EFT or check so posted dollars equal deposited dollars; short deposits get flagged, not buried.</li>
+            <li><strong>Route exceptions to humans</strong> — hold denials, partial payments, and unusual codes for manual review rather than auto-posting them as adjustments.</li>
+            <li><strong>Audit the adjustment rules</strong> — auto-posting logic decides which CARCs become write-offs, and a misconfigured rule can write off thousands before anyone notices.</li>
+          </ul>
+          <p>Automation for the routine, human eyes on the exceptions — that's what makes this step both efficient and a real revenue safeguard.</p>
+
+          <h2 id="our-approach">How Bill The Max helps</h2>
+          <p>We treat the remittance as a revenue checkpoint, not a clerical chore. We enroll your practice in ERA and EFT with every payer, post payments accurately, and decode CARC/RARC codes so denials and underpayments surface right away. We load your contracted fee schedules to catch any payer that allows less than it owes, route exceptions to a human reviewer, and reconcile each deposit — so the money you earned is the money you keep.</p>
+
+          <h2 id="takeaways">Key takeaways</h2>
+          <div class="callout">
+            <ul class="mb-0">
+              <li>An EOB is the human-readable explanation of a claim; an ERA (the 835 file) is the same information in machine-readable form for automated posting.</li>
+              <li>Read each line in order — billed, allowed, contractual adjustment, patient responsibility, paid — and make sure the numbers balance.</li>
+              <li>CARC codes explain why an amount changed and RARC codes add detail; the CO/PR/OA group prefix tells you who, if anyone, can be billed.</li>
+              <li>Accurate posting keeps your A/R honest and turns silent zero-pays into workable denials.</li>
+              <li>Verify allowed amounts against contracted rates — underpayments are recoverable only if caught at posting.</li>
+              <li>Auto-post the routine, but reconcile deposits and send denials and partial payments to a human reviewer.</li>
+            </ul>
+          </div>
+
+          <hr class="divider mt-3" />
+          <p class="mt-2">
+            <a class="back-link" href="blog.html">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+              Back to all articles
+            </a>
+          </p>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- ============== CTA BAND ============== -->
+    <section class="section-sm">
+      <div class="container">
+        <div class="cta-band">
+          <span class="eyebrow">Maximize Every Claim</span>
+          <h2>Stop writing off money you actually earned.</h2>
+          <p>Underpayments and silent denials hide in your remittances. Let Bill The Max post payments accurately, decode every reason code, and recover the revenue your current process misses. Start with a free practice audit.</p>
+          <div class="cta-actions">
+            <a class="btn btn-gold btn-lg" href="contact.html">Get a Free Practice Audit</a>
+            <a class="btn btn-ghost-light btn-lg" href="services.html">Explore our services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============== CANONICAL FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Bill The Max home">
+            <span class="brand-mark" aria-hidden="true"><span>B</span></span>
+            <span>Bill The Max</span>
+          </a>
+          <p class="footer-about">Premium medical &amp; dental billing and revenue-cycle management for practices nationwide. Maximum reimbursement. Minimum hassle.</p>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="specialties.html">Specialties</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get Started</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Free Practice Audit</a></li>
+            <li><a href="contact.html">Request a Consultation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <address class="footer-contact">
+            183 Wilson Street, Suite 230<br>
+            Brooklyn, NY 11211<br>
+            Phone: <a href="tel:+19179369446">(917) 936-9446</a><br>
+            <a href="mailto:info@billthemax.com">info@billthemax.com</a><br>
+            Fax: (732) 992-3363
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year">2026</span> Bill The Max. All rights reserved.</span>
+        <span>HIPAA-compliant medical &amp; dental billing &middot; Brooklyn, NY</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
