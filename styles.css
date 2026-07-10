@@ -265,6 +265,8 @@ strong { color: var(--navy-700); }
 .footer-contact { font-style: normal; color: #aebed0; line-height: 1.85; }
 .footer-contact a { color: #aebed0; }
 .footer-contact a:hover { color: #fff; }
+.footer-legal a { color: #aebed0; }
+.footer-legal a:hover { color: #fff; }
 .footer-bottom {
   margin-top: 48px;
   padding-top: 22px;
