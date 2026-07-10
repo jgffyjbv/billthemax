@@ -1,0 +1,228 @@
+content:
+  - name: home
+    label: "🏠 Home Page"
+    type: file
+    path: index.html
+    format: raw
+    fields:
+      - name: body
+        label: Page HTML
+        type: code
+        options:
+          language: html
+
+  - name: about
+    label: "About Page"
+    type: file
+    path: about.html
+    format: raw
+    fields:
+      - name: body
+        label: Page HTML
+        type: code
+        options:
+          language: html
+
+  - name: services
+    label: "Services Page"
+    type: file
+    path: services.html
+    format: raw
+    fields:
+      - name: body
+        label: Page HTML
+        type: code
+        options:
+          language: html
+
+  - name: specialties
+    label: "Specialties Page"
+    type: file
+    path: specialties.html
+    format: raw
+    fields:
+      - name: body
+        label: Page HTML
+        type: code
+        options:
+          language: html
+
+  - name: contact
+    label: "Contact Page"
+    type: file
+    path: contact.html
+    format: raw
+    fields:
+      - name: body
+        label: Page HTML
+        type: code
+        options:
+          language: html
+
+  - name: blog_index
+    label: "Blog Index Page"
+    type: file
+    path: blog.html
+    format: raw
+    fields:
+      - name: body
+        label: Page HTML
+        type: code
+        options:
+          language: html
+
+  - name: blog_claim_denials
+    label: "Blog: Claim Denials"
+    type: file
+    path: blog-claim-denials.html
+    format: raw
+    fields:
+      - name: body
+        label: Page HTML
+        type: code
+        options:
+          language: html
+
+  - name: blog_clean_claims
+    label: "Blog: Clean Claims"
+    type: file
+    path: blog-clean-claims.html
+    format: raw
+    fields:
+      - name: body
+        label: Page HTML
+        type: code
+        options:
+          language: html
+
+  - name: blog_credentialing
+    label: "Blog: Credentialing"
+    type: file
+    path: blog-credentialing.html
+    format: raw
+    fields:
+      - name: body
+        label: Page HTML
+        type: code
+        options:
+          language: html
+
+  - name: blog_dental_vs_medical
+    label: "Blog: Dental vs Medical Billing"
+    type: file
+    path: blog-dental-vs-medical-billing.html
+    format: raw
+    fields:
+      - name: body
+        label: Page HTML
+        type: code
+        options:
+          language: html
+
+  - name: blog_eligibility_verification
+    label: "Blog: Eligibility Verification"
+    type: file
+    path: blog-eligibility-verification.html
+    format: raw
+    fields:
+      - name: body
+        label: Page HTML
+        type: code
+        options:
+          language: html
+
+  - name: blog_eob_vs_era
+    label: "Blog: EOB vs ERA"
+    type: file
+    path: blog-eob-vs-era.html
+    format: raw
+    fields:
+      - name: body
+        label: Page HTML
+        type: code
+        options:
+          language: html
+
+  - name: blog_hipaa_compliance
+    label: "Blog: HIPAA Compliance"
+    type: file
+    path: blog-hipaa-compliance.html
+    format: raw
+    fields:
+      - name: body
+        label: Page HTML
+        type: code
+        options:
+          language: html
+
+  - name: blog_inhouse_vs_outsourced
+    label: "Blog: In-house vs Outsourced"
+    type: file
+    path: blog-inhouse-vs-outsourced.html
+    format: raw
+    fields:
+      - name: body
+        label: Page HTML
+        type: code
+        options:
+          language: html
+
+  - name: blog_medical_coding_basics
+    label: "Blog: Medical Coding Basics"
+    type: file
+    path: blog-medical-coding-basics.html
+    format: raw
+    fields:
+      - name: body
+        label: Page HTML
+        type: code
+        options:
+          language: html
+
+  - name: blog_out_of_network
+    label: "Blog: Out of Network"
+    type: file
+    path: blog-out-of-network.html
+    format: raw
+    fields:
+      - name: body
+        label: Page HTML
+        type: code
+        options:
+          language: html
+
+  - name: blog_prior_authorization
+    label: "Blog: Prior Authorization"
+    type: file
+    path: blog-prior-authorization.html
+    format: raw
+    fields:
+      - name: body
+        label: Page HTML
+        type: code
+        options:
+          language: html
+
+  - name: blog_reduce_days_in_ar
+    label: "Blog: Reduce Days in AR"
+    type: file
+    path: blog-reduce-days-in-ar.html
+    format: raw
+    fields:
+      - name: body
+        label: Page HTML
+        type: code
+        options:
+          language: html
+
+  - name: blog_what_is_rcm
+    label: "Blog: What is RCM"
+    type: file
+    path: blog-what-is-rcm.html
+    format: raw
+    fields:
+      - name: body
+        label: Page HTML
+        type: code
+        options:
+          language: html
