@@ -107,18 +107,6 @@ content:
         options:
           language: html
 
-  - name: blog_dental_vs_medical
-    label: "Blog: Dental vs Medical Billing"
-    type: file
-    path: blog-dental-vs-medical-billing.html
-    format: raw
-    fields:
-      - name: body
-        label: Page HTML
-        type: code
-        options:
-          language: html
-
   - name: blog_eligibility_verification
     label: "Blog: Eligibility Verification"
     type: file
