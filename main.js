@@ -26,7 +26,7 @@
   // ----- Contact form: AJAX submit to FormSubmit -----
   var form = document.getElementById("consult-form");
   if (form) {
-    var endpoint = "https://formsubmit.co/ajax/info@billthemax.com";
+    var endpoint = "https://formsubmit.co/ajax/b447a53f383b66d0dfea95539dd438a6";
 
     // Status message element (created once, inserted after the submit button)
     var status = document.createElement("p");

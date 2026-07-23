@@ -202,12 +202,13 @@
           <h2 id="form-title">Send us a message</h2>
           <p class="form-intro">Fill out the form below and a member of our revenue-cycle team will get back to you within one business day.</p>
 
-          <form id="consult-form" action="https://formsubmit.co/ajax/info@billthemax.com" method="POST" class="form-grid">
+          <form id="consult-form" action="https://formsubmit.co/ajax/b447a53f383b66d0dfea95539dd438a6" method="POST" class="form-grid">
 
-            <!-- FormSubmit configuration -->
+            <!-- FormSubmit configuration (alias string hides the real inbox from scrapers) -->
             <input type="hidden" name="_subject" value="New consultation request — billthemax.com">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_autoresponse" value="Thank you for reaching out to Bill The Max! Your consultation request has been received, and a member of our revenue-cycle team will get back to you within one business day. If anything is urgent in the meantime, you can reach us directly at info@billthemax.com.">
             <!-- Honeypot: bots fill this, humans never see it -->
             <input type="text" name="_honey" class="field-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
