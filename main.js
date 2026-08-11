@@ -63,10 +63,31 @@
       }
       status.style.display = "none";
 
+      var payload = new FormData(form);
+
+      // Make sure the person's address reaches the inbox in a usable form.
+      // 1. _replyto sets the notification's Reply-To, so "Reply" goes to them, not FormSubmit.
+      // 2. The address also goes into the subject line, so it's visible in the inbox list
+      //    without having to open the message and read the field table.
+      var emailField = form.querySelector('[name="email"]');
+      var senderEmail = emailField && emailField.value ? emailField.value.trim() : "";
+      var nameField = form.querySelector('[name="Full name"]');
+      var senderName = nameField && nameField.value ? nameField.value.trim() : "";
+
+      if (senderEmail) {
+        payload.set("_replyto", senderEmail);
+        payload.set(
+          "_subject",
+          "New consultation request — " +
+            (senderName ? senderName + " — " : "") +
+            senderEmail
+        );
+      }
+
       fetch(endpoint, {
         method: "POST",
         headers: { "Accept": "application/json" },
-        body: new FormData(form)
+        body: payload
       })
         .then(function (res) {
           return res.json().catch(function () { return {}; }).then(function (data) {
@@ -74,7 +95,16 @@
           });
         })
         .then(function (result) {
-          if (result.ok) {
+          // FormSubmit answers 200 even when it refuses the submission (e.g. an
+          // unactivated form), so res.ok alone would show a green "sent" message while
+          // nothing was delivered. The real verdict is the "success" field, which comes
+          // back as the string "true" rather than a boolean.
+          var succeeded =
+            result.ok &&
+            result.data &&
+            String(result.data.success).toLowerCase() === "true";
+
+          if (succeeded) {
             form.reset();
             setStatus("Thanks! Your request has been sent — we'll reply within one business day.", true);
           } else {

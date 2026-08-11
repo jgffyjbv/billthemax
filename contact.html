@@ -208,7 +208,14 @@
             <input type="hidden" name="_subject" value="New consultation request — billthemax.com">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_autoresponse" value="Thank you for reaching out to Bill The Max! Your consultation request has been received, and a member of our revenue-cycle team will get back to you within one business day. If anything is urgent in the meantime, you can reach us directly at info@billthemax.com.">
+            <!--
+              NOTE: _autoresponse was removed deliberately — it could never fire here.
+              FormSubmit's docs: "autoresponse won't work with forms that are disabled
+              reCAPTCHA and forms that are submitting through AJAX." This form does both
+              (_captcha=false above, and main.js submits via fetch), so the auto-reply was
+              silently dropped on every submission. Do not re-add it without also enabling
+              reCAPTCHA and switching to a non-AJAX submit.
+            -->
             <!-- Honeypot: bots fill this, humans never see it -->
             <input type="text" name="_honey" class="field-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
@@ -219,7 +226,13 @@
 
             <div class="field">
               <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
-              <input type="email" id="email" name="Email" autocomplete="email" required>
+              <!--
+                The name MUST stay lowercase "email". FormSubmit only recognises a field
+                named exactly "email" as the sender's address; that is what populates the
+                notification's Reply-To header so the inbox can just hit Reply to reach the
+                doctor. Renaming this to "Email" silently breaks replying.
+              -->
+              <input type="email" id="email" name="email" autocomplete="email" required>
             </div>
 
             <div class="field">
